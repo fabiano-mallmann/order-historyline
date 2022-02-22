@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Magentando::top_level" title="Magentando" module="Magentando_OrderHistoryLine" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Magentando_OrderHistoryLine::magentando_orderhistoryline_historyline" title="HistoryLine" module="Magentando_OrderHistoryLine" sortOrder="9999" resource="Magento_Backend::content" parent="Magentando::top_level" action="magentando_orderhistoryline/historyline/index"/>
+	</menu>
+</config>

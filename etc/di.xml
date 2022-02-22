@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magentando\OrderHistoryLine\Api\HistoryLineRepositoryInterface" type="Magentando\OrderHistoryLine\Model\HistoryLineRepository"/>
+	<preference for="Magentando\OrderHistoryLine\Api\Data\HistoryLineInterface" type="Magentando\OrderHistoryLine\Model\HistoryLine"/>
+	<preference for="Magentando\OrderHistoryLine\Api\Data\HistoryLineSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Magentando\OrderHistoryLine\Model\ResourceModel\HistoryLine\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">magentando_orderhistoryline_historyline</argument>
+			<argument name="resourceModel" xsi:type="string">Magentando\OrderHistoryLine\Model\ResourceModel\HistoryLine\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="magentando_orderhistoryline_historyline_listing_data_source" xsi:type="string">Magentando\OrderHistoryLine\Model\ResourceModel\HistoryLine\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="magentando_orderhistoryline_historyline" resource="default" engine="innodb" comment="magentando_orderhistoryline_historyline Table">
+		<column xsi:type="int" name="historyline_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="historyline_id"/>
+		</constraint>
+		<column name="description" nullable="true" xsi:type="varchar" comment="description" length="255"/>
+		<column name="status_order" nullable="true" xsi:type="varchar" comment="status_order" length="45"/>
+		<column name="before" nullable="true" xsi:type="varchar" comment="before" length="45"/>
+		<column name="font_code" nullable="true" xsi:type="varchar" comment="fontawesome code" length="45"/>
+	</table>
+</schema>
